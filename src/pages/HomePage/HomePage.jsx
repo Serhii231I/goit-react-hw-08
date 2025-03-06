@@ -4,7 +4,7 @@ const HomePage = () => {
   return (
     <>
       <AppBar />
-      <h2>Contacts welcome page!</h2>
+      <h2>Contacts welcome page!!!</h2>
     </>
   );
 };
