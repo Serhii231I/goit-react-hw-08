@@ -1,7 +1,8 @@
 import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { loginThunk } from "../redux/auth/operations";
+import { loginThunk } from "../../redux/auth/operations";
+import css from "./LoginPage.module.css";
 
 const LoginPage = () => {
   const initialValues = {
@@ -18,20 +19,22 @@ const LoginPage = () => {
     options.resetForm();
   };
   return (
-    <div>
+    <div className={css.formContainer}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form>
-          <h3>Login</h3>
-          <label>
-            <span>Email:</span>
+        <Form className={css.form}>
+          <h3 className={css.header}>Login</h3>
+          <label className={css.label}>
+            <span className={css.span}>Email:</span>
             <Field name="email" />
           </label>
-          <label>
-            <span>Password:</span>
+          <label className={css.label}>
+            <span className={css.span}>Password:</span>
             <Field name="password" type="password" />
           </label>
-          <button type="submit">Login</button>
-          <p>
+          <button className={css.button} type="submit">
+            Login
+          </button>
+          <p className={css.text}>
             You still have not account?
             <Link to="/register"> Lets create one!</Link>
           </p>

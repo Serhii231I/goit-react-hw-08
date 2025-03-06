@@ -14,6 +14,7 @@ export const fetchContacts = createAsyncThunk('contacts/fetchAll', async (_, thu
 
     try {
         const { data } = await goitApi.get('contacts');
+        console.log("Contacts fetched:", data);
         return data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
