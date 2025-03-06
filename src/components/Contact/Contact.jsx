@@ -3,7 +3,7 @@ import s from "../Contact/Contact.module.css";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaUserTie } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsOps";
+import { deleteContact } from "../../redux/contacts/operations";
 const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
